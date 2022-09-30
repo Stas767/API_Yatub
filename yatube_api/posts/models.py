@@ -53,3 +53,6 @@ class Follow(models.Model):
 
     def __str__(self):
         return self.user, self.following
+
+    class Meta:
+        unique_together = ('user', 'following')
